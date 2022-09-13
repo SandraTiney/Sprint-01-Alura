@@ -1,0 +1,143 @@
+body{
+
+    background: #e9ecee;
+}
+.contenedor{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.conteiner-left{
+    padding-top: 65px;
+    width: 65%;
+   
+  }
+
+#Logo{
+    display: flex;
+    position: absolute;
+    width: 120px;
+    height: 48px;
+    left: 40px;
+    top: 20px;
+}
+
+.encriptar-desencriptado{
+    
+    margin: 0 auto;
+    display: flex;
+    border-radius: 24px;
+    border: 1px solid #39c;
+    background:  #e9ecee;
+    height: 250px;
+    width:65%;
+  
+    font-family: arial;
+    color:rgb(77, 77, 77);
+    
+    
+}
+
+::placeholder {
+    color: #0A3871; 
+    font-size: 20px;
+    font-family:arial;
+  }
+.container{
+    margin-bottom: 55px;
+    text-align: center;
+    color: #192ee6; 
+    font-family:arial;
+}  
+#condicion{
+margin-left: -200px;
+font-size: 12px;
+color: gray;
+}
+.exclamation{
+    width: 16px;
+}
+.btn{
+    width: 200px;
+    height: 50px;
+    border-radius: 24px;
+    font-family: arial;
+    border: 1px solid #0A3871;
+}
+#btn-encriptar{
+background: #0A3871;
+color: #FFFFFF;
+}
+#btn-desencriptar{
+color: #0A3871;
+background: #D8DFE8;
+}
+
+.conteiner-right{
+    width: 35%;
+    text-align: center;
+}
+.derecho{
+    width: 300px ;
+    height: 550px;
+    background: white;
+    border: 1px solid #336baf;
+    border-radius: 18px;
+    margin-top: 6%;
+    margin-left: 15%;
+    font-family: arial;
+    color:rgb(77, 77, 77);
+}
+
+#muñeco{
+    margin-top: 110px;
+    margin-bottom: 50px;
+    text-align: center;
+    width:75%;
+}
+.Mensaje-encontrado{
+     margin-bottom: 20px;
+    font-family: arial;
+    color:rgb(77, 77, 77);
+    font-size: 14px;
+}
+
+
+@media only screen and (max-width: 800px) {
+    .conteiner-left{
+        width: 100%;
+      }
+      .conteiner-right{
+        width: 100%;
+        text-align: center;
+       
+    }
+    .derecho{
+        position: relative;
+        margin: 0 auto;
+        display: flex;
+        width: 500px ;
+        height: 200px;
+        background: white;
+        border: 1px solid #336baf;
+        border-radius: 24px;
+        margin-top: 6%;
+        font-family: arial;
+        color:rgb(77, 77, 77);
+        margin-bottom: 6%;
+        
+    }
+    
+    #muñeco{
+        display:none;
+    }   
+    .Mensaje-encontrado{
+        position: absolute;
+        top: 50%;
+        left: 18%;
+        margin-bottom: 20px;
+        font-family: arial;
+        color:rgb(77, 77, 77);
+        font-size: 14px;
+     
+    }}

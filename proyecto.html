@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+            <meta charset="UTF-8">
+            <title>Change 1</title>
+            <link rel="stylesheet" href="proyecto.css">
+            <link rel="stylesheet" href="reset.css">
+
+    </head>
+<body>
+  
+<div class="contenedor"> <!--Inicio contenedor principal-->
+  <br><br><br>
+
+  <div class="conteiner-left">
+        <img id="Logo" src="imagenes/Logo.png">
+          <input type="text"   id="encriptar-desencriptado" class="encriptar-desencriptado" placeholder="Ingrese el texto aquí">
+          <br><br><br>
+          <div class="container">
+            <p id="condicion">  Solo letras minúsculas y sin acentos</p>
+                <br>
+            <button type="button"  id="btn-encriptar" class="btn" onclick="encriptar()" >Encriptar</button>
+            <button type="button" id="btn-desencriptar" class="btn" onclick="desencriptar()">Desencriptar</button>
+        
+          </div>
+
+    <script>
+    // Recibimos el mensaje    
+    function encriptar(){
+
+      const mensaje =  document.getElementById('encriptar-desencriptado').value;
+
+        // Declaramos el valor encriptado
+        let mensajeEncriptado = mensaje;
+        var mapObj = {
+          a:"ia",
+          e:"enter",
+          i:"imes",
+          o:"ober",
+          u:"ufat"
+        };
+
+      mensajeEncriptado = mensajeEncriptado.replace(/a|e|i|o|u/g, function(matched){
+      return mapObj[matched];
+      }); 
+    var element = document.getElementById("mostrar-mensaje");
+        element.innerHTML = mensajeEncriptado;
+
+    }
+    //Desencriptar
+
+      function desencriptar(){
+      const mensaje2 =  document.getElementById('encriptar-desencriptado').value;
+
+
+    // Declaramos el valor encriptado
+
+        let mensajeDesencriptado = mensaje2;
+        var mapObj2 = {
+          ia:"a",
+          enter:"e",
+          imes:"i",
+          ober:"o",
+          ufat:"u"
+        };
+    var test="prueba del boton copiar";
+
+        mensajeDesencriptado = mensajeDesencriptado.replace(/ia|enter|imes|ober|ufat/g, function(matched){
+          return mapObj2[matched];
+        });
+    var element = document.getElementById("mostrar-mensaje");
+        element.innerHTML = mensajeDesencriptado;
+
+      var btnCopiar = document.getElementById("btn-copiar");
+      btnCopiar.innerHTML = test;
+          
+    }
+
+    </script>
+  </div>
+
+  <div class="conteiner-right">
+      <div class="derecho">
+         <div id ="mostrar-mensaje"><img id="muñeco" src="imagenes/Muñeco.png">
+            <div class="Mensaje-encontrado"> 
+              <h1>Ningún mensaje fue encontrado </h1>
+              <p>Ingrese el texto que deseas encriptar o desencriptar</p>
+            </div>
+         </div>
+       </div>
+  </div>
+
+</div><!--Fin contenedor principal-->
+ 
+</body>
+</html>
